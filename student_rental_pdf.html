@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rental Investment - University of Oregon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 0.4in;
+        }
+        
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.4;
+            color: #52594b;
+            margin: 0;
+            padding: 0;
+            background: #e3dac3;
+        }
+        
+        .page {
+            min-height: 10.2in;
+            padding: 24px;
+            box-sizing: border-box;
+            background: #e3dac3;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #52594b, #88947c);
+            color: #e3dac3;
+            padding: 24px;
+            margin: -24px -24px 24px -24px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            margin: 12px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 18px 0;
+        }
+        
+        .comparison-card {
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .losing-card {
+            background: rgba(200, 85, 61, 0.1);
+            border: 2px solid #c8553d;
+        }
+        
+        .winning-card {
+            background: rgba(136, 148, 124, 0.2);
+            border: 2px solid #88947c;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .losing-card .card-title {
+            color: #c8553d;
+        }
+        
+        .winning-card .card-title {
+            color: #88947c;
+        }
+        
+        .big-number {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1;
+            margin: 10px 0;
+        }
+        
+        .losing-card .big-number {
+            color: #c8553d;
+        }
+        
+        .winning-card .big-number {
+            color: #88947c;
+        }
+        
+        .card-description {
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+        
+        .breakdown {
+            background: rgba(136, 148, 124, 0.1);
+            padding: 14px;
+            margin: 16px 0;
+            border-left: 4px solid #88947c;
+        }
+        
+        .breakdown h3 {
+            color: #52594b;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+            text-align: center;
+        }
+        
+        .breakdown-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            text-align: center;
+        }
+        
+        .breakdown-item {
+            background: rgba(136, 148, 124, 0.2);
+            padding: 16px 12px;
+            border-radius: 6px;
+        }
+        
+        .breakdown-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #88947c;
+            display: block;
+        }
+        
+        .breakdown-label {
+            font-size: 12px;
+            color: #52594b;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .five-ways {
+            background: #52594b;
+            color: #e3dac3;
+            padding: 16px;
+            margin: 18px 0 16px 0;
+            border-radius: 8px;
+        }
+        
+        .five-ways h2 {
+            color: #e3dac3;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .ways-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+        
+        .way-item {
+            text-align: center;
+            background: rgba(227, 218, 195, 0.1);
+            padding: 16px 8px;
+            border-radius: 6px;
+        }
+        
+        .way-number {
+            background: #c8553d;
+            color: #e3dac3;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin: 0 auto 8px auto;
+        }
+        
+        .way-title {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        
+        .way-description {
+            font-size: 10px;
+            opacity: 0.85;
+            line-height: 1.3;
+        }
+        
+        .assumptions {
+            background: rgba(200, 85, 61, 0.05);
+            padding: 10px;
+            margin: 12px 0;
+            font-size: 9px;
+            color: rgba(82, 89, 75, 0.7);
+            border-left: 3px solid #c8553d;
+        }
+        
+        .assumptions strong {
+            color: #c8553d;
+            font-weight: 600;
+        }
+        
+        .cta {
+            background: #c8553d;
+            color: #e3dac3;
+            padding: 14px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 12px;
+            border-radius: 8px;
+        }
+        
+        .vs-divider {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #c8553d;
+            margin: 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="header">
+        <h1>Stop Throwing Money Away</h1>
+        <div class="subtitle">Interested in Turning Student Housing Costs into Real Estate Returns?</div>
+    </div>
+
+    <div class="comparison-grid">
+        <div class="comparison-card losing-card">
+            <div class="card-title">Paying Rent</div>
+            <div class="big-number">-$37K</div>
+            <div class="card-description">Money Gone Forever<br>Zero Equity • Zero Assets</div>
+        </div>
+        
+        <div class="comparison-card winning-card">
+            <div class="card-title">Buy Rental</div>
+            <div class="big-number">+$127K</div>
+            <div class="card-description">Total Financial Benefit<br>Plus Own $579K Asset</div>
+        </div>
+    </div>
+
+    <div class="vs-divider">VS</div>
+
+    <div class="breakdown">
+        <h3>Your Investment Pays Off in Multiple Ways</h3>
+        <div class="breakdown-grid">
+            <div class="breakdown-item">
+                <span class="breakdown-number">$79K</span>
+                <div class="breakdown-label">Property Appreciation</div>
+            </div>
+            <div class="breakdown-item">
+                <span class="breakdown-number">$37K</span>
+                <div class="breakdown-label">Child's Rent Savings</div>
+            </div>
+            <div class="breakdown-item">
+                <span class="breakdown-number">+$11K</span>
+                <div class="breakdown-label">Positive Cash Flow</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="five-ways">
+        <h2>Real Estate Pays in 5 Ways</h2>
+        <div class="ways-grid">
+            <div class="way-item">
+                <div class="way-number">1</div>
+                <div class="way-title">Cash Flow</div>
+                <div class="way-description">Monthly income from rent payments</div>
+            </div>
+            <div class="way-item">
+                <div class="way-number">2</div>
+                <div class="way-title">Appreciation</div>
+                <div class="way-description">Property value increases over time</div>
+            </div>
+            <div class="way-item">
+                <div class="way-number">3</div>
+                <div class="way-title">Loan Paydown</div>
+                <div class="way-description">Tenants pay mortgage for you</div>
+            </div>
+            <div class="way-item">
+                <div class="way-number">4</div>
+                <div class="way-title">Tax Benefits</div>
+                <div class="way-description">Deductions & depreciation</div>
+            </div>
+            <div class="way-item">
+                <div class="way-number">5</div>
+                <div class="way-title">Inflation Hedge</div>
+                <div class="way-description">Pay fixed mortgage with cheaper dollars</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="assumptions">
+        <strong>Analysis Assumptions:</strong> $500K purchase price, 25% down, 6.5% mortgage, 4-bedroom rental, $1K/room rent, 5% annual appreciation, 3% rent increases, $4K property tax, 8% property management fee, 3-year holding period.
+    </div>
+
+    <div class="cta">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+            <div style="flex: 1; text-align: left;">
+                <strong>Ready to turn your child's college years into generational wealth?</strong> I help UO families do exactly that. Contact me to explore campus investment properties and discover what this strategy could look like for your family.
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+                <img src="https://github.com/aarongeeee/SIgnatureHTML/blob/653645c56c209d19b7b981dcabe3252d8bc58f86/QR.png?raw=true" alt="QR Code" style="width: 50px; height: 50px; border: 2px solid #e3dac3;">
+                <div style="font-size: 11px; font-weight: 600; line-height: 1.2;">Campus Investments<br>Playbook</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
