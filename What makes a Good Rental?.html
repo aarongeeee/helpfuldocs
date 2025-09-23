@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UO Student Rental Investment Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 0.4in;
+        }
+        
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.3;
+            color: #52594b;
+            margin: 0;
+            padding: 0;
+            background: #e3dac3;
+            font-size: 12px;
+        }
+        
+        .page {
+            min-height: 10.2in;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #e3dac3;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #52594b, #88947c);
+            color: #e3dac3;
+            padding: 18px;
+            margin: -20px -20px 16px -20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            margin: 4px 0 0 0;
+            font-size: 12px;
+            opacity: 0.85;
+            font-weight: 400;
+        }
+        
+        h2 {
+            color: #c8553d;
+            font-size: 15px;
+            margin: 16px 0 8px 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        h2::before {
+            content: '';
+            width: 3px;
+            height: 15px;
+            background: #c8553d;
+        }
+        
+        h3 {
+            color: #52594b;
+            font-size: 11px;
+            margin: 8px 0 4px 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .highlight-box {
+            background: #88947c;
+            color: #e3dac3;
+            padding: 8px;
+            margin: 8px 0;
+            font-weight: 500;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        
+        .cashflow-box {
+            background: #c8553d;
+            color: #e3dac3;
+            padding: 8px;
+            margin: 8px 0;
+            font-weight: 500;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0;
+        }
+        
+        .checklist li {
+            padding: 2px 0;
+            padding-left: 16px;
+            position: relative;
+            font-size: 11px;
+        }
+        
+        .checklist li:before {
+            content: "•";
+            color: #c8553d;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 10px 0;
+        }
+        
+        .column {
+            background: rgba(136, 148, 124, 0.1);
+            padding: 8px;
+            border-left: 3px solid #88947c;
+            border-radius: 4px;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .location-card {
+            background: rgba(200, 85, 61, 0.1);
+            border-left: 3px solid #c8553d;
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        
+        .location-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #c8553d;
+            display: block;
+            line-height: 1;
+        }
+        
+        .location-detail {
+            font-size: 9px;
+            color: #52594b;
+            margin-top: 4px;
+            line-height: 1.2;
+        }
+        
+        .qr-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            gap: 12px;
+        }
+        
+        .qr-item {
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .qr-code {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 4px auto;
+            display: block;
+            border-radius: 4px;
+        }
+        
+        .qr-label {
+            font-size: 8px;
+            color: #52594b;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+        
+        strong {
+            color: #52594b;
+            font-weight: 600;
+        }
+        
+        .money-icon {
+            color: #c8553d;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .price-range {
+            background: rgba(136, 148, 124, 0.15);
+            padding: 8px;
+            margin: 8px 0;
+            border-left: 4px solid #88947c;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .key-insights {
+            background: rgba(200, 85, 61, 0.08);
+            border: 2px solid #c8553d;
+            padding: 10px;
+            margin: 12px 0;
+            border-radius: 6px;
+            font-size: 11px;
+        }
+
+        .final-section {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 2px solid #88947c;
+        }
+
+        p {
+            margin: 12px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="header">
+        <h1>UO Student Rental Investment Guide</h1>
+        <div class="subtitle">Key Attributes for Profitable Student Rentals in Eugene</div>
+    </div>
+
+    <div class="key-insights">
+        <strong>Key Investment Principle:</strong> Successful UO student rentals balance immediate cash flow with long-term appreciation potential. The best properties generate strong monthly returns while positioned in areas with growth opportunities near campus.
+    </div>
+
+    <h2>Prime Student Rental Locations</h2>
+    
+    <div class="three-column">
+        <div class="location-card">
+            <span class="location-name">Campus Core</span>
+            <div class="location-detail">Walking distance to classes<br>Premium rental rates<br>Highest demand</div>
+        </div>
+        <div class="location-card">
+            <span class="location-name">Campus Adjacent</span>
+            <div class="location-detail">Easy bike/bus access<br>Best value balance<br>Strong rental stability</div>
+        </div>
+        <div class="location-card">
+            <span class="location-name">Transit Corridors</span>
+            <div class="location-detail">Alder, Agate, 13th Streets<br>Value opportunities<br>Future growth potential</div>
+        </div>
+    </div>
+
+    <div class="qr-section">
+        <div class="qr-item">
+            <img src="https://raw.githubusercontent.com/aarongeeee/SIgnatureHTML/357f40a1aed0f5e96f59e0e5da350a649925ee8b/rentalAreasQR.png" alt="Neighborhood Breakdown QR" class="qr-code">
+            <div class="qr-label">Neighborhood<br>Guide</div>
+        </div>
+        <div style="flex: 2;">
+            <div class="highlight-box">
+                <strong>Location Strategy:</strong> While campus proximity drives demand, properties near key transit corridors and student amenities can also provide excellent rental and resale value.
+            </div>
+        </div>
+    </div>
+
+    <h2>Current Market Analysis</h2>
+
+    <div class="price-range">
+        <strong>Rental Rates per Bedroom:</strong> $650 - $950/month depending on location and condition<br>
+        <strong>Optimal Property Size:</strong> 4-6 bedrooms generating $2,600-$4,200/month gross rent
+    </div>
+
+    <h2>Two Proven Investment Strategies</h2>
+
+    <div class="two-column">
+        <div class="column">
+            <h3>Cash Flow Focused</h3>
+            <ul class="checklist">
+                <li>Immediate monthly returns (8-12% cap rates)</li>
+                <li>Move-in ready condition</li>
+                <li>$650-$750 per bedroom range</li>
+                <li>Lower maintenance, passive management</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Appreciation Focused</h3>
+            <ul class="checklist">
+                <li>Premium locations with growth potential</li>
+                <li>Properties suitable for improvements</li>
+                <li>Higher long-term returns</li>
+                <li>More active management approach</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Essential Property Characteristics</h2>
+
+    <div class="two-column">
+        <div class="column">
+            <h3>Must-Have Features</h3>
+            <ul class="checklist">
+                <li>4-6 bedrooms (optimal rental yield)</li>
+                <li>Minimum 2 full bathrooms</li>
+                <li>Adequate parking (street parking acceptable)</li>
+                <li>Functional kitchen and common areas</li>
+                <li>Laundry facilities (in-unit strongly preferred)</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Value-Add Opportunities</h3>
+            <ul class="checklist">
+                <li>Basement conversion potential</li>
+                <li>Properties needing cosmetic updates</li>
+                <li>Energy efficiency improvements</li>
+                <li>Modern amenity additions</li>
+                <li>Outdoor space enhancements</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cashflow-box">
+        <strong>Investment Sweet Spot:</strong> Look for 4-5 bedroom properties that can generate $650-$850 per bedroom monthly while offering potential for value improvements or strategic positioning near campus growth areas.
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 12px; border-top: 2px solid #88947c;">
+        <div style="font-size: 12px; color: #52594b; font-weight: 500;">
+            Aaron Gathrid Real Estate
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+            <span style="font-size: 12px; color: #52594b; font-weight: 500;">Want to learn more?</span>
+            <img src="https://raw.githubusercontent.com/aarongeeee/SIgnatureHTML/357f40a1aed0f5e96f59e0e5da350a649925ee8b/campusInvestmentsQR.png" alt="Campus Investment Resources QR" style="width: 35px; height: 35px; border-radius: 4px;">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
