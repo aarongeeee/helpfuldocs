@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UO Faculty Housing Guide | Eugene Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 0.4in;
+        }
+        
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            color: #52594b;
+            margin: 0;
+            padding: 0;
+            background: #e3dac3;
+            font-size: 16px;
+        }
+        
+        .page {
+            min-height: auto;
+            page-break-after: auto;
+            padding: 28px 28px 6px 28px;
+            box-sizing: border-box;
+            background: #e3dac3;
+        }
+        
+        .page:last-child {
+            page-break-after: auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #52594b, #88947c);
+            color: #e3dac3;
+            padding: 28px;
+            margin: -28px -28px 28px -28px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            margin: 8px 0 0 0;
+            font-size: 16px;
+            opacity: 0.85;
+            font-weight: 400;
+        }
+        
+        h2 {
+            color: #c8553d;
+            font-size: 22px;
+            margin: 20px 0 14px 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: '';
+            width: 3px;
+            height: 18px;
+            background: #c8553d;
+        }
+        
+        h3 {
+            color: #52594b;
+            font-size: 16px;
+            margin: 16px 0 10px 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .highlight-box {
+            background: #88947c;
+            color: #e3dac3;
+            padding: 16px;
+            margin: 16px 0;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background: rgba(136, 148, 124, 0.1);
+            border-left: 4px solid #88947c;
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 16px;
+        }
+        
+        .neighborhood-box {
+            background: rgba(200, 85, 61, 0.05);
+            border-left: 4px solid #c8553d;
+            padding: 12px;
+            margin: 12px 0 16px 0;
+            font-size: 15px;
+        }
+        
+        .neighborhood-name {
+            font-weight: 700;
+            color: #c8553d;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        
+        .neighborhood-details {
+            color: rgba(82, 89, 75, 0.9);
+            line-height: 1.5;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+        
+        .checklist li {
+            padding: 5px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 16px;
+        }
+        
+        .checklist li:before {
+            content: "•";
+            color: #c8553d;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        
+        .column-box {
+            background: rgba(136, 148, 124, 0.08);
+            padding: 14px;
+            font-size: 15px;
+        }
+        
+        .column-title {
+            font-weight: 700;
+            color: #52594b;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .contact-box {
+            background: #52594b;
+            color: #e3dac3;
+            padding: 16px 20px 20px 20px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            border-left: 4px solid #c8553d;
+        }
+        
+        .contact-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        
+        .contact-details {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        strong {
+            color: #52594b;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            text-align: left;
+            font-style: italic;
+            color: #52594b;
+            margin: -8px 0 16px 0;
+            font-size: 14px;
+        }
+
+        .quick-stat {
+            display: inline-block;
+            background: rgba(200, 85, 61, 0.15);
+            padding: 3px 8px;
+            margin: 2px 4px 2px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #52594b;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+    <div class="header">
+        <h1>UO Faculty Housing Guide</h1>
+        <div class="subtitle">Your Reference for Eugene Neighborhoods, Market Dynamics & Local Resources</div>
+    </div>
+
+    <div class="highlight-box">
+        This guide is built from conversations with dozens of UO faculty members about what they wish they'd known when navigating Eugene's housing market. Whether you're buying, renting, or just getting oriented—this is your starting point.
+    </div>
+
+    <h2>Understanding Eugene's Neighborhoods</h2>
+    <div class="tagline">Commute times, character, and what actually matters</div>
+
+    <div class="neighborhood-box">
+        <div class="neighborhood-name">South Eugene / University Area</div>
+        <div class="neighborhood-details">
+            <span class="quick-stat">5-10 min to campus</span>
+            <span class="quick-stat">Walkable/bikeable</span><br>
+            Tree-lined streets, historic homes, close to Hendricks Park. Mix of professors, grad students, and longtime residents. Strong school district (South Eugene High). Competitive market—homes move quickly here.
+        </div>
+    </div>
+
+    <div class="neighborhood-box">
+        <div class="neighborhood-name">Friendly Area</div>
+        <div class="neighborhood-details">
+            <span class="quick-stat">10-12 min to campus</span>
+            <span class="quick-stat">Family-friendly</span><br>
+            Quiet, safe, excellent schools (Edison Elementary). Popular with young families. Mix of mid-century and newer construction. Strong sense of community, walkable to cafes and markets.
+        </div>
+    </div>
+
+    <div class="neighborhood-box">
+        <div class="neighborhood-name">Amazon Area</div>
+        <div class="neighborhood-details">
+            <span class="quick-stat">8-12 min to campus</span>
+            <span class="quick-stat">Established</span><br>
+            Mature trees, larger lots, more space. Less walkable but quieter. Good schools, strong neighborhood association. Tends to be slightly more affordable than South Eugene while maintaining quality.
+        </div>
+    </div>
+
+    <div class="neighborhood-box">
+        <div class="neighborhood-name">Fairmount / College Hill</div>
+        <div class="neighborhood-details">
+            <span class="quick-stat">12-15 min to campus</span>
+            <span class="quick-stat">Views/hills</span><br>
+            Higher elevation, some homes with views. Mix of architectural styles. Less foot traffic, more privacy. Good value relative to walkability trade-off.
+        </div>
+    </div>
+
+    <div class="neighborhood-box">
+        <div class="neighborhood-name">Whiteaker</div>
+        <div class="neighborhood-details">
+            <span class="quick-stat">10-15 min to campus</span>
+            <span class="quick-stat">Arts district</span><br>
+            Eugene's creative hub—breweries, studios, community gardens. Younger demographic, more eclectic. Gentrifying neighborhood with mix of renovated and original homes. Urban feel.
+        </div>
+    </div>
+
+    <h2 style="margin-top: 8px;">The Faculty Homebuyer Landscape</h2>
+
+    <h3>Timing Your Purchase</h3>
+    <div class="info-box">
+        <strong>Most faculty wait 6-18 months before buying.</strong> This gives you time to understand the city, explore neighborhoods in person, and identify what matters most for your lifestyle. There's no penalty for waiting—and plenty of advantages to getting it right.
+    </div>
+
+    <h3>What Faculty Prioritize</h3>
+    <ul class="checklist">
+        <li><strong>Commute flexibility</strong> — Bike/walk vs. drive makes a real difference in daily quality of life</li>
+        <li><strong>School quality</strong> — If you have kids, this often becomes the primary filter</li>
+        <li><strong>Resale value</strong> — Eugene's market favors certain neighborhoods when it's time to sell</li>
+        <li><strong>Community feel</strong> — Some areas skew academic, others are more mixed</li>
+    </ul>
+
+    <h2>Why Faculty Buy</h2>
+
+    <div class="two-column">
+        <div class="column-box">
+            <div class="column-title">Renting Means:</div>
+            • Monthly payments build someone else's equity<br>
+            • No control over rent increases<br>
+            • Limited ability to customize your space<br>
+            • No long-term asset building
+        </div>
+        <div class="column-box">
+            <div class="column-title">Buying Means:</div>
+            • Building equity with every payment<br>
+            • Locking in stable housing costs<br>
+            • Tax benefits and wealth building<br>
+            • Your space, your decisions
+        </div>
+    </div>
+
+    <div class="info-box" style="margin-top: 12px;">
+        <strong>If you're planning to stay for 3+ years,</strong> buying typically makes financial sense. Your monthly payment becomes an investment in your future rather than your landlord's.
+    </div>
+
+    <h3>Current Market Context</h3>
+    <div class="info-box">
+        Eugene's housing market is <strong>competitive but not impossible</strong>. Inventory fluctuates seasonally (spring/summer are busiest). Homes near campus in desirable school districts typically receive multiple offers.
+    </div>
+
+    <h2>What Happens Next</h2>
+
+    <div class="info-box">
+        <strong>If you're ready to explore:</strong> I'm happy to walk you through current listings, give you unfiltered takes on specific properties, or just talk through your timeline. Most faculty I work with appreciate a low-pressure sounding board before they're ready to jump in.
+    </div>
+
+    <div class="info-box" style="margin-top: 12px;">
+        <strong>If you're still orienting:</strong> No problem. I send a monthly market report that tracks trends, inventory, and pricing—useful whether you're 6 months out or 2 years out from making a move. Just let me know if you'd like to be added.
+    </div>
+
+    <div class="contact-box">
+        <strong>Questions about Eugene housing?</strong><br>
+        I work with UO faculty and families throughout the area—happy to help as your needs evolve.
+        <div class="contact-name">Aaron Gathrid, Berkshire Hathaway</div>
+        <div class="contact-details">541-200-5788 • aarongathrid@bhhsrep.com</div>
+    </div>
+
+</div>
+
+</body>
+</html>
